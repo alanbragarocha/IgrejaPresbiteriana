@@ -1,25 +1,50 @@
+/* ============================================
+   ESCALAS.CSS - SISTEMA DE ESTILO SUSTENTÁVEL
+   Quarta Igreja Presbiteriana de Macaé
+   ============================================ */
 
-/* Novo esquema de cores vibrantes */
-:root {
+/* --------------------------------------
+   1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+   -------------------------------------- */
+   :root {
+    /* Cores principais */
     --primary-color: #e94e1b;       /* Laranja vibrante */
     --secondary-color: #9c27b0;     /* Roxo intenso */
     --accent-color: #8bc34a;        /* Verde lima */
+    
+    /* Cores neutras */
     --text-color: #333;
     --light-text: #fff;
     --dark-bg: #2d2d2d;
     --light-bg: #f5f3ee;            /* Fundo creme claro */
     --gray-bg: #e6e1d6;             /* Fundo bege */
-    --transition: all 0.3s ease;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --border-radius: 6px;
     
-    /* Cores vibrantes adicionais para detalhes */
+    /* Cores vibrantes adicionais */
     --vibrant-yellow: #ffc107;
     --vibrant-red: #f44336;
     --vibrant-teal: #009688;
+    
+    /* Gradientes */
     --gradient-bg: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    
+    /* Utilitários */
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 12px 20px rgba(0, 0, 0, 0.2);
+    --border-radius: 6px;
+    
+    /* Espaçamentos */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-xxl: 4rem;
 }
 
+/* --------------------------------------
+   2. RESET E ESTILOS BASE
+   -------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +58,25 @@ body {
     background-color: var(--light-bg);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* --------------------------------------
+   3. TIPOGRAFIA
+   -------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     margin-bottom: 1rem;
@@ -59,27 +103,14 @@ p {
     margin-bottom: 1rem;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: var(--transition);
-}
-
-a:hover {
-    color: var(--secondary-color);
-}
-
+/* --------------------------------------
+   4. CONTÊINERES E UTILITÁRIOS
+   -------------------------------------- */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 var(--space-sm);
 }
 
 .section-title {
@@ -100,7 +131,9 @@ a:hover {
     background-color: var(--accent-color);
 }
 
-/* Header */
+/* --------------------------------------
+   5. HEADER E NAVEGAÇÃO
+   -------------------------------------- */
 header {
     background: linear-gradient(120deg, var(--light-bg) 0%, var(--gray-bg) 100%);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -113,7 +146,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: var(--space-sm);
 }
 
 .logo a {
@@ -127,6 +160,7 @@ header {
     letter-spacing: 1px;
 }
 
+/* Navegação principal */
 .main-nav {
     display: flex;
     align-items: center;
@@ -165,6 +199,7 @@ header {
     width: 100%;
 }
 
+/* Botão de menu móvel */
 .mobile-menu-toggle {
     display: none;
     background: none;
@@ -181,9 +216,24 @@ header {
     transition: var(--transition);
 }
 
-/* Conteúdo principal */
+/* Animação do botão hambúrguer */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --------------------------------------
+   6. CONTEÚDO PRINCIPAL
+   -------------------------------------- */
 .main-content {
-    padding: 4rem 0;
+    padding: var(--space-xxl) 0;
     position: relative;
     overflow: hidden;
 }
@@ -202,16 +252,16 @@ header {
 
 .page-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: var(--space-xl);
     animation: fadeIn 1s ease;
 }
 
 .page-header h1 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     position: relative;
     display: inline-block;
-    padding-bottom: 1rem;
+    padding-bottom: var(--space-sm);
 }
 
 .page-header h1::after {
@@ -232,12 +282,14 @@ header {
     font-size: 1.1rem;
 }
 
-/* Grid de Escalas */
+/* --------------------------------------
+   7. GRID DE ESCALAS E CARDS
+   -------------------------------------- */
 .escalas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 2.5rem;
-    margin-top: 3rem;
+    margin-top: var(--space-xl);
 }
 
 .escala-card {
@@ -254,9 +306,10 @@ header {
 
 .escala-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-hover);
 }
 
+/* Variação de cores para cards */
 .escala-card:nth-child(2) {
     border-top-color: var(--secondary-color);
 }
@@ -277,6 +330,7 @@ header {
     border-top-color: var(--vibrant-red);
 }
 
+/* Cabeçalho do card */
 .escala-header {
     background: var(--gray-bg);
     padding: 1.2rem 1.5rem;
@@ -323,6 +377,7 @@ header {
     background: rgba(0, 0, 0, 0.05);
 }
 
+/* Conteúdo do card */
 .escala-content {
     padding: 1.5rem;
 }
@@ -332,7 +387,7 @@ header {
 }
 
 .escala-item {
-    padding: 1rem 0;
+    padding: var(--space-sm) 0;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
@@ -383,7 +438,9 @@ header {
     color: #555;
 }
 
-/* Footer */
+/* --------------------------------------
+   8. RODAPÉ
+   -------------------------------------- */
 footer {
     background: var(--dark-bg);
     color: var(--light-text);
@@ -418,7 +475,7 @@ footer::before {
 
 .footer-section h4 {
     color: var(--accent-color);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
     font-size: 1.2rem;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -439,8 +496,8 @@ footer::before {
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
 }
 
 .footer-logo h3 {
@@ -453,11 +510,7 @@ footer::before {
     display: inline-block;
 }
 
-.footer-contact p {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-}
-
+.footer-contact p,
 .footer-horarios p {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
@@ -465,8 +518,8 @@ footer::before {
 
 .social-icons {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
 }
 
 .social-icons a {
@@ -488,12 +541,14 @@ footer::before {
 
 .copyright {
     background-color: rgba(0, 0, 0, 0.2);
-    padding: 1rem 0;
+    padding: var(--space-sm) 0;
     margin-top: 2rem;
     text-align: center;
 }
 
-/* Animações */
+/* --------------------------------------
+   9. ANIMAÇÕES
+   -------------------------------------- */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -505,14 +560,19 @@ footer::before {
     }
 }
 
-/* Media Queries */
+/* --------------------------------------
+   10. RESPONSIVIDADE
+   -------------------------------------- */
+/* Tablets e desktops menores */
 @media (max-width: 992px) {
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Tablets e dispositivos móveis */
 @media (max-width: 768px) {
+    /* Navegação mobile */
     .mobile-menu-toggle {
         display: block;
     }
@@ -535,6 +595,28 @@ footer::before {
         left: 0;
     }
     
+    /* Overlay para quando o menu está aberto */
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        pointer-events: none;
+    }
+    
+    body.menu-open::after {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Ajuste no grid de escalas */
     .escalas-grid {
         grid-template-columns: 1fr;
         max-width: 500px;
@@ -542,6 +624,7 @@ footer::before {
         margin-right: auto;
     }
     
+    /* Footer responsivo */
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -566,7 +649,13 @@ footer::before {
     }
 }
 
+/* Dispositivos móveis pequenos */
 @media (max-width: 480px) {
+    :root {
+        --space-xxl: 3rem;
+        --space-xl: 2.5rem;
+    }
+    
     h1 {
         font-size: 2rem;
     }
@@ -576,6 +665,10 @@ footer::before {
     }
     
     .section-description {
-        padding: 0 1rem;
+        padding: 0 var(--space-sm);
+    }
+    
+    .escala-card {
+        margin: 0 var(--space-sm);
     }
 }

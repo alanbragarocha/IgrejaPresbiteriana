@@ -1,34 +1,59 @@
-/* Estilos para a Página do Pastor - Quarta Igreja Presbiteriana de Macaé */
+/* ============================================
+   PASTOR.CSS - SISTEMA DE ESTILO SUSTENTÁVEL
+   Quarta Igreja Presbiteriana de Macaé
+   ============================================ */
 
-/* Variáveis de cores principal já definidas no CSS base */
-:root {
+/* --------------------------------------
+   1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+   -------------------------------------- */
+   :root {
+    /* Cores principais */
     --primary-color: #e94e1b;       /* Laranja vibrante */
     --secondary-color: #9c27b0;     /* Roxo intenso */
     --accent-color: #8bc34a;        /* Verde lima */
+    
+    /* Cores neutras */
     --text-color: #333;
     --light-text: #fff;
     --dark-bg: #2d2d2d;
     --light-bg: #f5f3ee;            /* Fundo creme claro */
     --gray-bg: #e6e1d6;             /* Fundo bege */
-    --transition: all 0.3s ease;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --border-radius: 6px;
     
-    /* Cores vibrantes adicionais para detalhes */
+    /* Cores vibrantes adicionais */
     --vibrant-yellow: #ffc107;
     --vibrant-red: #f44336;
     --vibrant-teal: #009688;
+    
+    /* Gradientes */
     --gradient-bg: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    --gradient-light: linear-gradient(120deg, var(--light-bg) 0%, var(--gray-bg) 100%);
+    
+    /* Utilitários */
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.1);
+    --border-radius: 6px;
+    
+    /* Dimensões */
+    --container-width: 1200px;
+    --header-height: 70px;
 }
 
-/* Estilos Gerais */
+/* --------------------------------------
+   2. RESET E ESTILOS BASE
+   -------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--light-bg);
     color: var(--text-color);
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 img {
@@ -38,8 +63,21 @@ img {
     border-radius: var(--border-radius);
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+/* --------------------------------------
+   3. UTILITÁRIOS
+   -------------------------------------- */
 .container {
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -48,9 +86,50 @@ img {
     text-align: center;
 }
 
-/* Estilos para o Header */
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1.2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--gradient-bg);
+    border-radius: 30px;
+}
+
+.section-title.text-center {
+    text-align: center;
+}
+
+.section-title.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-description {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--text-color);
+}
+
+.section-description.text-center {
+    text-align: center;
+}
+
+/* --------------------------------------
+   4. LAYOUT DE CABEÇALHO
+   -------------------------------------- */
 header {
-    background: linear-gradient(120deg, var(--light-bg) 0%, var(--gray-bg) 100%);
+    background: var(--gradient-light);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -62,10 +141,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: 0 auto;
 }
 
+/* Logo */
 .logo a {
     display: flex;
     align-items: center;
@@ -75,14 +155,13 @@ header {
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: var(--transition);
-    text-decoration: none;
 }
 
 .logo a:hover {
     color: var(--secondary-color);
 }
 
+/* Navegação principal */
 .main-nav {
     display: flex;
     align-items: center;
@@ -90,10 +169,7 @@ header {
 
 .nav-links {
     display: flex;
-    list-style: none;
     gap: 1.5rem;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links a {
@@ -101,8 +177,6 @@ header {
     font-weight: 600;
     position: relative;
     padding: 0.5rem 0;
-    transition: var(--transition);
-    text-decoration: none;
 }
 
 .nav-links a:not(.btn-nav):hover, 
@@ -126,7 +200,7 @@ header {
     width: 100%;
 }
 
-/* Botão mobile */
+/* Botão do menu mobile */
 .mobile-menu-toggle {
     display: none;
     background: none;
@@ -135,6 +209,7 @@ header {
     padding: 0.5rem;
     flex-direction: column;
     gap: 5px;
+    z-index: 1001;
 }
 
 .mobile-menu-toggle span {
@@ -142,11 +217,25 @@ header {
     width: 25px;
     height: 3px;
     background-color: var(--primary-color);
-    margin: 0;
     transition: var(--transition);
 }
 
-/* Barra de próximos eventos no topo */
+/* Animação do botão hambúrguer */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --------------------------------------
+   5. BARRA DE EVENTOS
+   -------------------------------------- */
 .proximos-eventos {
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     color: var(--light-text);
@@ -192,7 +281,9 @@ header {
     justify-content: center;
 }
 
-/* Banner principal da página */
+/* --------------------------------------
+   6. BANNER PRINCIPAL
+   -------------------------------------- */
 .sobre-banner {
     background: var(--gradient-bg);
     padding: 8rem 0 4rem;
@@ -233,7 +324,9 @@ header {
     opacity: 0.9;
 }
 
-/* Seção de história/trajetória */
+/* --------------------------------------
+   7. SEÇÃO DE HISTÓRIA/TRAJETÓRIA
+   -------------------------------------- */
 .sobre-historia {
     padding: 5rem 0;
     background-color: var(--light-bg);
@@ -246,6 +339,7 @@ header {
     gap: 3rem;
 }
 
+/* Imagem com efeitos */
 .sobre-image {
     flex: 1 1 400px;
     border-radius: var(--border-radius);
@@ -274,6 +368,7 @@ header {
     transform: scale(1.05);
 }
 
+/* Texto de conteúdo */
 .sobre-text {
     flex: 1 1 500px;
 }
@@ -297,11 +392,6 @@ header {
     border-radius: 30px;
 }
 
-/* Ajuste para títulos centralizados */
-.sobre-text h2.text-center {
-    text-align: center;
-}
-
 .sobre-text h2.text-center::after {
     left: 50%;
     transform: translateX(-50%);
@@ -311,50 +401,11 @@ header {
     margin-bottom: 1.2rem;
     font-size: 1.1rem;
     line-height: 1.7;
-    color: var(--text-color);
 }
 
-/* Estilos para títulos centralizados de seções */
-.section-title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    position: relative;
-    padding-bottom: 1.2rem;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    height: 3px;
-    background: var(--gradient-bg);
-    border-radius: 30px;
-}
-
-.section-title.text-center {
-    text-align: center;
-}
-
-.section-title.text-center::after {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.section-description {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    color: var(--text-color);
-}
-
-.section-description.text-center {
-    text-align: center;
-}
-
-/* Seção Cronologia */
+/* --------------------------------------
+   8. SEÇÃO DE CRONOLOGIA
+   -------------------------------------- */
 .sobre-formacao {
     padding: 5rem 0;
     background-color: var(--gray-bg);
@@ -414,7 +465,7 @@ header {
 
 .timeline-content:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-hover);
 }
 
 .timeline-content h3 {
@@ -436,10 +487,11 @@ header {
 
 .timeline-content p {
     margin-bottom: 0.5rem;
-    color: var(--text-color);
 }
 
-/* Seção Especialidades */
+/* --------------------------------------
+   9. SEÇÃO DE ESPECIALIDADES
+   -------------------------------------- */
 .especialidades {
     padding: 5rem 0;
     background-color: var(--light-bg);
@@ -465,7 +517,7 @@ header {
 
 .coluna-especialidade:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-hover);
 }
 
 .coluna-especialidade h3 {
@@ -508,7 +560,9 @@ header {
     font-weight: bold;
 }
 
-/* Seção Diferenciais */
+/* --------------------------------------
+   10. SEÇÃO DE DIFERENCIAIS/PUBLICAÇÕES
+   -------------------------------------- */
 .diferenciais {
     padding: 5rem 0;
     background-color: var(--gray-bg);
@@ -549,7 +603,7 @@ header {
 
 .coluna-diferencial:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-hover);
 }
 
 .coluna-diferencial:hover::before {
@@ -579,10 +633,11 @@ header {
 
 .coluna-diferencial p {
     text-align: center;
-    color: var(--text-color);
 }
 
-/* Footer */
+/* --------------------------------------
+   11. RODAPÉ
+   -------------------------------------- */
 footer {
     background: var(--dark-bg);
     color: var(--light-text);
@@ -613,7 +668,7 @@ footer::before {
     z-index: 1;
 }
 
-/* Estilos para as seções do footer */
+/* Seções do rodapé */
 .footer-section {
     display: flex;
     flex-direction: column;
@@ -639,20 +694,22 @@ footer::before {
     background-color: var(--primary-color);
 }
 
+/* Logo do rodapé */
 .footer-logo h3 {
     font-size: 1.4rem;
     line-height: 1.3;
-    color: var(--light-text);
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
+/* Informações de contato e horários */
 .footer-contact p,
 .footer-horarios p {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
 
+/* Ícones sociais */
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -667,7 +724,6 @@ footer::before {
     height: 40px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    color: var(--light-text);
     transition: var(--transition);
 }
 
@@ -680,6 +736,7 @@ footer::before {
     font-size: 1.2rem;
 }
 
+/* Copyright */
 .copyright {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 1rem 0;
@@ -688,8 +745,23 @@ footer::before {
     margin-top: 2rem;
 }
 
-/* Responsividade */
+/* --------------------------------------
+   12. RESPONSIVIDADE
+   -------------------------------------- */
+
+/* Desktops grandes e médios */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Tablets e pequenos desktops */
 @media (max-width: 992px) {
+    :root {
+        --container-width: 100%;
+    }
+    
     .sobre-banner h1 {
         font-size: 2.8rem;
     }
@@ -703,17 +775,41 @@ footer::before {
     }
 }
 
+/* Tablets e dispositivos móveis grandes */
 @media (max-width: 768px) {
+    /* Ativação do menu mobile */
     .mobile-menu-toggle {
         display: flex;
     }
+    
+    /* Overlay para fundo escuro quando menu está aberto */
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        pointer-events: none;
+    }
+    
+    body.menu-open::after {
+        opacity: 1;
+        visibility: visible;
+    }
 
+    /* Menu de navegação mobile */
     .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
         width: 250px;
-        height: 100%;
+        height: 100vh;
         background-color: var(--light-bg);
         flex-direction: column;
         justify-content: center;
@@ -721,6 +817,7 @@ footer::before {
         padding: 2rem;
         transition: 0.3s ease-in-out;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
     
     .nav-links.active {
@@ -733,10 +830,12 @@ footer::before {
         text-align: center;
     }
     
+    /* Ajustes de tamanho e layout para móvel */
     .sobre-banner h1 {
         font-size: 2.5rem;
     }
     
+    /* Ajuste na linha de tempo */
     .timeline::before {
         left: 50%;
         transform: translateX(-50%);
@@ -755,6 +854,7 @@ footer::before {
         margin-bottom: 1rem;
     }
     
+    /* Converter grid para coluna única */
     .sobre-content,
     .especialidades-container,
     .container-diferenciais {
@@ -762,6 +862,7 @@ footer::before {
         align-items: center;
     }
     
+    /* Rodapé responsivo */
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -782,6 +883,7 @@ footer::before {
     }
 }
 
+/* Dispositivos móveis */
 @media (max-width: 576px) {
     .sobre-banner {
         padding: 6rem 0 3rem;
@@ -805,5 +907,10 @@ footer::before {
     
     .proximos-eventos {
         display: none;
+    }
+    
+    .coluna-especialidade,
+    .coluna-diferencial {
+        padding: 1.5rem;
     }
 }
