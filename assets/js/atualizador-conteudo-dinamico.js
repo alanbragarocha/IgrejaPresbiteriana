@@ -16,8 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // =========================================================
         eventosDestacados: [
             { 
-                nome: "Culto Dominical", 
-                horario: "Domingo às 10h e 18h",
+                nome: "Escola Dominical", 
+                horario: "Domingo às 9h",
+                icone: "fas fa-users" 
+            },
+            { 
+                nome: "Culto", 
+                horario: "Domingo às 9h e 18h",
                 icone: "fas fa-bible" 
             },
             { 
@@ -25,18 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 horario: "Quinta às 6h",
                 icone: "fas fa-praying-hands" 
             },
-            { 
-                nome: "Escola Dominical", 
-                horario: "Domingo às 9h",
-                icone: "fas fa-users" 
-            }
+           
         ],
         
         // =========================================================
         // CONFIGURAÇÃO DOS HORÁRIOS EXIBIDOS NO FOOTER
         // =========================================================
         cultos: [
-            { nome: "Culto Dominical", horario: "Domingo às 10h e 18h" },
+            { nome: "Culto Dominical", horario: "Domingo às 9h e 18h" },
             { nome: "Escola Dominical", horario: "Domingo às 9h" },
             { nome: "Estudo Bíblico", horario: "Quarta às 19:30h" },
             { nome: "Culto de Oração", horario: "Quinta às 6h" },
