@@ -3,53 +3,6 @@
    Quarta Igreja Presbiteriana de Macaé
    ============================================ */
 
-/* --------------------------------------
-   1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
-   -------------------------------------- */
-   :root {
-    /* Cores principais */
-    --primary-color: #e94e1b;       /* Laranja vibrante */
-    --secondary-color: #9c27b0;     /* Roxo intenso */
-    --accent-color: #8bc34a;        /* Verde lima */
-    
-    /* Cores neutras */
-    --text-color: #333;
-    --light-text: #fff;
-    --dark-bg: #2d2d2d;
-    --light-bg: #f5f3ee;            /* Fundo creme claro */
-    --gray-bg: #e6e1d6;             /* Fundo bege */
-    
-    /* Cores vibrantes adicionais */
-    --vibrant-yellow: #ffc107;
-    --vibrant-red: #f44336;
-    --vibrant-teal: #009688;
-    
-    /* Gradientes */
-    --gradient-bg: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    
-    /* Utilitários */
-    --transition: all 0.3s ease;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --shadow-hover: 0 12px 20px rgba(0, 0, 0, 0.2);
-    --border-radius: 6px;
-    
-    /* Espaçamentos */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-    --space-xxl: 4rem;
-}
-
-/* --------------------------------------
-   2. RESET E ESTILOS BASE
-   -------------------------------------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: 'Roboto', sans-serif;

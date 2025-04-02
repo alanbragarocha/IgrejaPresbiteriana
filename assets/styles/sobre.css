@@ -3,48 +3,7 @@
    Quarta Igreja Presbiteriana de Macaé
    ============================================ */
 
-/* --------------------------------------
-   1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
-   -------------------------------------- */
-   :root {
-    /* Cores principais */
-    --primary-color: #e94e1b;       /* Laranja vibrante */
-    --secondary-color: #9c27b0;     /* Roxo intenso */
-    --accent-color: #8bc34a;        /* Verde lima */
-    
-    /* Cores neutras */
-    --text-color: #333;
-    --light-text: #fff;
-    --dark-bg: #2d2d2d;
-    --light-bg: #f5f3ee;            /* Fundo creme claro */
-    --gray-bg: #e6e1d6;             /* Fundo bege */
-    
-    /* Cores vibrantes adicionais */
-    --vibrant-yellow: #ffc107;
-    --vibrant-red: #f44336;
-    --vibrant-teal: #009688;
-    
-    /* Gradientes */
-    --gradient-bg: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    --gradient-header: linear-gradient(120deg, var(--light-bg) 0%, var(--gray-bg) 100%);
-    
-    /* Espaçamentos */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 2rem;
-    --space-lg: 3rem;
-    --space-xl: 5rem;
-    
-    /* Utilitários */
-    --transition: all 0.3s ease;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.1);
-    --border-radius: 6px;
-    --border-radius-round: 9999px;
-    
-    /* Variáveis de contêiner */
-    --container-max: 1200px;
-}
+
 
 /* --------------------------------------
    2. UTILITÁRIOS

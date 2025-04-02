@@ -3,64 +3,7 @@
    Quarta Igreja Presbiteriana de Macaé
    ============================================ */
 
-/* --------------------------------------
-   1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
-   -------------------------------------- */
-   :root {
-    /* Cores principais */
-    --primary-color: #e94e1b;       /* Laranja vibrante */
-    --secondary-color: #9c27b0;     /* Roxo intenso */
-    --accent-color: #8bc34a;        /* Verde lima */
-    
-    /* Cores neutras */
-    --text-color: #333;
-    --light-text: #fff;
-    --dark-bg: #2d2d2d;
-    --light-bg: #f5f3ee;            /* Fundo creme claro */
-    --gray-bg: #e6e1d6;             /* Fundo bege */
-    
-    /* Cores derivadas e variações */
-    --primary-light: #f47249;
-    --primary-dark: #c73d0e;
-    --secondary-light: #b04fc0;
-    --secondary-dark: #7b1fa2;
-    --accent-light: #a2cf6e;
-    --accent-dark: #71a436;
-    --vibrant-yellow: #ffc107;
-    --vibrant-red: #f44336;
-    --vibrant-teal: #009688;
-    
-    /* Gradientes */
-    --gradient-bg: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    
-    /* Espaçamento */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 2rem;
-    --space-lg: 3rem;
-    --space-xl: 5rem;
-    
-    /* Utilitários */
-    --transition: all 0.3s ease;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.2);
-    --border-radius: 6px;
-    
-    /* Dimensões de contêiner */
-    --container-max: 1200px;
-    --container-narrow: 900px;
-}
 
-/* --------------------------------------
-   2. RESET E ESTILOS BASE
-   -------------------------------------- */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 html {
     scroll-behavior: smooth;
