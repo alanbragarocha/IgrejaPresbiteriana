@@ -3,8 +3,10 @@
    Quarta Igreja Presbiteriana de Macaé
    ============================================ */
 
-
-body {
+/* --------------------------------------
+   1. ESTILOS BASE
+   -------------------------------------- */
+   body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--light-bg);
     color: var(--text-color);
@@ -30,7 +32,7 @@ ul {
 }
 
 /* --------------------------------------
-   3. UTILITÁRIOS
+   2. UTILITÁRIOS
    -------------------------------------- */
 .container {
     max-width: var(--container-width);
@@ -83,7 +85,7 @@ ul {
 
 
 /* --------------------------------------
-   5. BARRA DE EVENTOS
+   3. BARRA DE EVENTOS
    -------------------------------------- */
 .proximos-eventos {
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
@@ -131,7 +133,7 @@ ul {
 }
 
 /* --------------------------------------
-   6. BANNER PRINCIPAL
+   4. BANNER PRINCIPAL
    -------------------------------------- */
 .sobre-banner {
     background: var(--gradient-bg);
@@ -174,7 +176,7 @@ ul {
 }
 
 /* --------------------------------------
-   7. SEÇÃO DE HISTÓRIA/TRAJETÓRIA
+   5. SEÇÃO DE HISTÓRIA/TRAJETÓRIA
    -------------------------------------- */
 .sobre-historia {
     padding: 5rem 0;
@@ -253,7 +255,7 @@ ul {
 }
 
 /* --------------------------------------
-   8. SEÇÃO DE CRONOLOGIA
+   6. SEÇÃO DE CRONOLOGIA
    -------------------------------------- */
 .sobre-formacao {
     padding: 5rem 0;
@@ -339,7 +341,7 @@ ul {
 }
 
 /* --------------------------------------
-   9. SEÇÃO DE ESPECIALIDADES
+   7. SEÇÃO DE ESPECIALIDADES
    -------------------------------------- */
 .especialidades {
     padding: 5rem 0;
@@ -410,7 +412,7 @@ ul {
 }
 
 /* --------------------------------------
-   10. SEÇÃO DE DIFERENCIAIS/PUBLICAÇÕES
+   8. SEÇÃO DE DIFERENCIAIS/PUBLICAÇÕES
    -------------------------------------- */
 .diferenciais {
     padding: 5rem 0;
@@ -485,7 +487,7 @@ ul {
 }
 
 /* --------------------------------------
-   11. RODAPÉ
+   9. RODAPÉ
    -------------------------------------- */
 footer {
     background: var(--dark-bg);
@@ -595,7 +597,7 @@ footer::before {
 }
 
 /* --------------------------------------
-   12. RESPONSIVIDADE
+   10. RESPONSIVIDADE
    -------------------------------------- */
 
 /* Desktops grandes e médios */

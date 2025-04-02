@@ -28,7 +28,7 @@ a:hover {
 }
 
 /* --------------------------------------
-   3. TIPOGRAFIA
+   1. TIPOGRAFIA
    -------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
@@ -57,7 +57,7 @@ p {
 }
 
 /* --------------------------------------
-   4. CONTÊINERES E UTILITÁRIOS
+   2. CONTÊINERES E UTILITÁRIOS
    -------------------------------------- */
 .container {
     width: 100%;
@@ -85,7 +85,7 @@ p {
 }
 
 /* --------------------------------------
-   6. CONTEÚDO PRINCIPAL
+   3. CONTEÚDO PRINCIPAL
    -------------------------------------- */
 .main-content {
     padding: var(--space-xxl) 0;
@@ -138,7 +138,7 @@ p {
 }
 
 /* --------------------------------------
-   7. GRID DE ESCALAS E CARDS
+   4. GRID DE ESCALAS E CARDS
    -------------------------------------- */
 .escalas-grid {
     display: grid;
@@ -294,7 +294,7 @@ p {
 }
 
 /* --------------------------------------
-   8. RODAPÉ
+   5. RODAPÉ
    -------------------------------------- */
 footer {
     background: var(--dark-bg);
@@ -402,7 +402,7 @@ footer::before {
 }
 
 /* --------------------------------------
-   9. ANIMAÇÕES
+   6. ANIMAÇÕES
    -------------------------------------- */
 @keyframes fadeIn {
     from {
@@ -416,7 +416,7 @@ footer::before {
 }
 
 /* --------------------------------------
-   10. RESPONSIVIDADE
+   7. RESPONSIVIDADE
    -------------------------------------- */
 /* Tablets e desktops menores */
 @media (max-width: 992px) {

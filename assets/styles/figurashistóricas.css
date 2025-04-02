@@ -4,8 +4,10 @@
    ============================================ */
 
 
-
-html {
+/* --------------------------------------
+   1. ESTILOS BASE
+   -------------------------------------- */
+   html {
     scroll-behavior: smooth;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
@@ -43,7 +45,7 @@ ul, ol {
 }
 
 /* --------------------------------------
-   3. TIPOGRAFIA
+   2. TIPOGRAFIA
    -------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
@@ -57,7 +59,7 @@ p {
 }
 
 /* --------------------------------------
-   4. CONTÊINERES E LAYOUTS BASE
+   3. CONTÊINERES E LAYOUTS BASE
    -------------------------------------- */
 .container {
     width: 100%;
@@ -96,7 +98,7 @@ p {
 }
 
 /* --------------------------------------
-   5. COMPONENTES DE BOTÕES
+   4. COMPONENTES DE BOTÕES
    -------------------------------------- */
 .btn {
     display: inline-flex;
@@ -152,7 +154,7 @@ p {
 }
 
 /* --------------------------------------
-   7. HERO BANNER
+   5. HERO BANNER
    -------------------------------------- */
 .hero-banner {
     background: var(--gradient-bg);
@@ -192,7 +194,7 @@ p {
 }
 
 /* --------------------------------------
-   8. GRID DE CONTEÚDO
+   6. GRID DE CONTEÚDO
    -------------------------------------- */
 .content-grid {
     display: grid;
@@ -246,7 +248,7 @@ p {
 }
 
 /* --------------------------------------
-   9. TIMELINE / LINHA DO TEMPO
+   7. TIMELINE / LINHA DO TEMPO
    -------------------------------------- */
 .timeline-section {
     padding: var(--space-xl) 0;
@@ -324,7 +326,7 @@ p {
 }
 
 /* --------------------------------------
-   10. CARDS GRID
+   8. CARDS GRID
    -------------------------------------- */
 .cards-section {
     padding: var(--space-xl) 0;
@@ -382,7 +384,7 @@ p {
 }
 
 /* --------------------------------------
-   11. VALORES / BADGES
+   9. VALORES / BADGES
    -------------------------------------- */
 .valores-container {
     display: flex;
@@ -410,7 +412,7 @@ p {
 }
 
 /* --------------------------------------
-   12. RODAPÉ
+   10. RODAPÉ
    -------------------------------------- */
 footer {
     background: var(--dark-bg);
@@ -542,7 +544,7 @@ footer::before {
 }
 
 /* --------------------------------------
-   13. RESPONSIVIDADE
+   11. RESPONSIVIDADE
    -------------------------------------- */
 
 /* Telas maiores e desktops */

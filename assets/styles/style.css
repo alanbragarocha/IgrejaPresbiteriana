@@ -1,5 +1,7 @@
-
-img {
+/* --------------------------------------
+   1. ESTILOS BASE
+   -------------------------------------- */
+   img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -16,7 +18,7 @@ a:hover {
 }
 
 /* --------------------------------------
-   3. TIPOGRAFIA
+   2. TIPOGRAFIA
    -------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
@@ -45,7 +47,7 @@ p {
 }
 
 /* --------------------------------------
-   4. CONTÊINERES E UTILITÁRIOS
+   3. CONTÊINERES E UTILITÁRIOS
    -------------------------------------- */
 .container {
     width: 100%;
@@ -88,7 +90,7 @@ p {
 }
 
 /* --------------------------------------
-   5. COMPONENTES DE BOTÕES
+   4. COMPONENTES DE BOTÕES
    -------------------------------------- */
 .btn-primary, .btn-secondary, .btn-nav {
     display: inline-block;
@@ -172,9 +174,8 @@ p {
     left: 100%;
 }
 
-/* -------------------------
 /* --------------------------------------
-   7. SEÇÃO HERO
+   5. SEÇÃO HERO
    -------------------------------------- */
 .hero {
     padding: var(--space-xxl) 0;
@@ -226,7 +227,7 @@ p {
 }
 
 /* --------------------------------------
-   8. SEÇÃO PASTOR
+   6. SEÇÃO PASTOR
    -------------------------------------- */
 .pastor-section {
     padding: var(--space-huge) 0;
@@ -310,7 +311,7 @@ p {
 }
 
 /* --------------------------------------
-   9. SEÇÃO REFORMA
+   7. SEÇÃO REFORMA
    -------------------------------------- */
 .reforma-section {
     padding: var(--space-huge) 0;
@@ -426,7 +427,7 @@ p {
 }
 
 /* --------------------------------------
-   10. SEÇÃO AGENDA
+   8. SEÇÃO AGENDA
    -------------------------------------- */
 .agenda-section {
     padding: var(--space-huge) 0;
@@ -579,7 +580,7 @@ p {
 }
 
 /* --------------------------------------
-   11. SEÇÃO MINISTÉRIO
+   9. SEÇÃO MINISTÉRIO
    -------------------------------------- */
 .ministerio {
     background: linear-gradient(to bottom, var(--light-bg) 0%, var(--white) 100%);
@@ -812,7 +813,7 @@ p {
 }
 
 /* --------------------------------------
-   12. SEÇÃO MAPA/LOCALIZAÇÃO
+   10. SEÇÃO MAPA/LOCALIZAÇÃO
    -------------------------------------- */
 .map-section {
     padding: var(--space-huge) 0;
@@ -849,7 +850,7 @@ p {
 }
 
 /* --------------------------------------
-   13. SEÇÃO DÍZIMOS E OFERTAS
+   11. SEÇÃO DÍZIMOS E OFERTAS
    -------------------------------------- */
 .dizimos-ofertas {
     padding: var(--space-huge) 0;
@@ -970,7 +971,7 @@ p {
 }
 
 /* --------------------------------------
-   14. RODAPÉ
+   12. RODAPÉ
    -------------------------------------- */
 footer {
     background: var(--dark-bg);
@@ -1096,7 +1097,7 @@ footer::before {
 }
 
 /* --------------------------------------
-   15. ANIMAÇÕES
+   13. ANIMAÇÕES
    -------------------------------------- */
 @keyframes fadeIn {
     from {
@@ -1110,7 +1111,7 @@ footer::before {
 }
 
 /* --------------------------------------
-   16. RESPONSIVIDADE
+   14. RESPONSIVIDADE
    -------------------------------------- */
 /* Tablets e desktops menores */
 @media (max-width: 992px) {

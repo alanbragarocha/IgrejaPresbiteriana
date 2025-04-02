@@ -4,16 +4,20 @@
    ============================================ */
 
 
+/* --------------------------------------
+   1. ESTILOS BASE
+   -------------------------------------- */
+/* Estilos base são importados do arquivo principal */
 
 /* --------------------------------------
    2. UTILITÁRIOS
    -------------------------------------- */
-.text-center {
+   .text-center {
     text-align: center;
 }
 
 /* --------------------------------------
-   4. BANNER PRINCIPAL
+   3. BANNER PRINCIPAL
    -------------------------------------- */
 .sobre-banner {
     background: var(--gradient-bg);
@@ -56,7 +60,7 @@
 }
 
 /* --------------------------------------
-   5. SEÇÃO DE HISTÓRIA
+   4. SEÇÃO DE HISTÓRIA
    -------------------------------------- */
 .sobre-historia {
     padding: var(--space-xl) 0;
@@ -139,7 +143,7 @@
 }
 
 /* --------------------------------------
-   6. TÍTULOS DE SEÇÃO E DESCRIÇÕES
+   5. TÍTULOS DE SEÇÃO E DESCRIÇÕES
    -------------------------------------- */
 .section-title {
     font-size: 2.5rem;
@@ -181,7 +185,7 @@
 }
 
 /* --------------------------------------
-   7. SEÇÃO CINCO SOLAS
+   6. SEÇÃO CINCO SOLAS
    -------------------------------------- */
 #principios {
     background-color: var(--gray-bg);
@@ -267,7 +271,7 @@
 }
 
 /* --------------------------------------
-   8. SEÇÃO CRONOLOGIA
+   7. SEÇÃO CRONOLOGIA
    -------------------------------------- */
 .sobre-formacao {
     padding: var(--space-xl) 0;
@@ -354,7 +358,7 @@
 }
 
 /* --------------------------------------
-   9. SEÇÃO ESPECIALIDADES
+   8. SEÇÃO ESPECIALIDADES
    -------------------------------------- */
 .especialidades {
     padding: var(--space-xl) 0;
@@ -425,7 +429,7 @@
 }
 
 /* --------------------------------------
-   10. SEÇÃO DIFERENCIAIS
+   9. SEÇÃO DIFERENCIAIS
    -------------------------------------- */
 .diferenciais {
     padding: var(--space-xl) 0;
@@ -501,7 +505,7 @@
 }
 
 /* --------------------------------------
-   11. RODAPÉ
+   10. RODAPÉ
    -------------------------------------- */
 footer {
     background: var(--dark-bg);
@@ -648,7 +652,7 @@ footer::before {
 }
 
 /* --------------------------------------
-   12. RESPONSIVIDADE
+   11. RESPONSIVIDADE
    -------------------------------------- */
 /* Desktops e tablets grandes */
 @media (max-width: 992px) {
