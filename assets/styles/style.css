@@ -355,6 +355,118 @@ header {
     transform: scale(1.05);
 }
 
+/* Seção do Pastor */
+.pastor-section {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.pastor-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23e94e1b" opacity="0.05"/></svg>');
+    background-size: 40px 40px;
+    z-index: 0;
+}
+
+.pastor-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.pastor-imagem {
+    flex: 0 0 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pastor-foto-oval {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 8px solid var(--primary-color);
+    transition: transform 0.4s ease;
+}
+
+.pastor-foto-oval:hover {
+    transform: scale(1.05);
+}
+
+.pastor-foto-oval img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pastor-conteudo {
+    flex: 1;
+}
+
+.pastor-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.pastor-cargo {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.pastor-acoes {
+    margin-top: 2rem;
+}
+
+.pastor-acoes .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsividade para a seção do Pastor */
+@media (max-width: 992px) {
+    .pastor-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pastor-imagem {
+        margin-bottom: 2rem;
+    }
+    
+    .pastor-conteudo {
+        max-width: 700px;
+    }
+    
+    .pastor-credenciais {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .pastor-foto-oval {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .pastor-info h3 {
+        font-size: 1.7rem;
+    }
+}
 /* Reforma section with triangle pattern */
 .reforma-section {
     padding: 5rem 0;
