@@ -88,7 +88,7 @@
                     <a href="cultos-e-eventos.html" class="btn-primary">Nossos Cultos e Eventos</a>
                 </div>
                 <div class="hero-image">
-                    <img src="./assets/imagens/hero.webp" alt="Interior da Igreja Presbiteriana de Macaé" width="600" height="400">
+                    <img src="./assets/imagens/capa igreja.jpg" alt="Interior da Igreja Presbiteriana de Macaé" width="600" height="400">
                 </div>
             </div>
         </section>
@@ -348,43 +348,39 @@
                 </div>
             </div>
         </section>
-
-
-<!-- Seção Dízimos e Ofertas -->
-<section class="dizimos-ofertas" id="dizimos-ofertas">
-    <div class="container">
-        <h2 class="section-title">Dízimos e Ofertas</h2>
-        <p class="section-description">Contribua para nossa obra através dos canais abaixo</p>
-        
-        <div class="dizimos-container">
-            <div class="dizimo-metodo">
-                <h3>Transferência Bancária</h3>
-                <div class="dados-bancarios">
-                    <p><strong>Banco:</strong> Banco do Brasil</p>
-                    <p><strong>Agência:</strong> 0000-0</p>
-                    <p><strong>Conta:</strong> 00000-0</p>
-                    <p><strong>Titular:</strong> Igreja Presbiteriana de Macaé</p>
-                    <p><strong>CNPJ:</strong> 00.000.000/0001-00</p>
-                </div>
-            </div>
-            
-            <div class="dizimo-metodo pix-container">
-                <h3>PIX</h3>
-                <div class="qrcode-container">
-                    <div class="qrcode">
-                        <!-- QR Code para PIX -->
-                        <img src="./assets/imagens/qr-code-pix.svg" alt="QR Code para PIX" />
+        <section class="dizimos-ofertas" id="dizimos-ofertas">
+            <div class="container">
+                <h2 class="section-title">Dízimos e Ofertas</h2>
+                <p class="section-description">Contribua para nossa obra através dos canais abaixo</p>
+                
+                <div class="dizimos-container">
+                    <div class="dizimo-metodo">
+                        <h3>Transferência Bancária</h3>
+                        <div class="dados-bancarios">
+                            <p><strong>Banco:</strong> <span id="banco-nome">Carregando...</span></p>
+                           <!-- <p><strong>Agência:</strong> <span id="banco-agencia">Carregando...</span></p>-->
+                            <p><strong>Conta:</strong> <span id="banco-conta">Carregando...</span></p>
+                            <p><strong>Titular:</strong> <span id="banco-titular">Carregando...</span></p>
+                            <p><strong>CNPJ:</strong> <span id="banco-cnpj">Carregando...</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="dizimo-metodo pix-container">
+                        <h3>PIX</h3>
+                        <div class="qrcode-container">
+                            <div class="qrcode">
+                                <img id="pix-qrcode" src="./assets/imagens/qr-code-pix.svg" alt="QR Code para PIX" />
+                            </div>
+                        </div>
+                        <div class="pix-info">
+                            <p><strong>Chave PIX:</strong> <span id="pix-key">Carregando...</span></p>
+                            <p><strong>Tipo:</strong> <span id="pix-tipo">Carregando...</span></p>
+                            <button class="btn-primary copy-button" onclick="copyPixKey()">Copiar Chave PIX</button>
+                        </div>
                     </div>
                 </div>
-                <div class="pix-info">
-                    <p><strong>Chave PIX:</strong> <span id="pix-key">00000000000</span></p>
-                    <p><strong>Tipo:</strong> CNPJ</p>
-                    <button class="btn-primary copy-button" onclick="copyPixKey()">Copiar Chave PIX</button>
-                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
 
     <footer>
@@ -464,6 +460,7 @@
                 });
             }
         });
+        
     </script>
 </body>
 </html>

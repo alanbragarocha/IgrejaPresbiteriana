@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             { 
                 nome: "Culto", 
-                horario: "Domingo às 9h e 18h",
+                horario: "Domingo às 18h",
                 icone: "fas fa-bible" 
             },
             { 
@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // CONFIGURAÇÃO DOS HORÁRIOS EXIBIDOS NO FOOTER
         // =========================================================
         cultos: [
-            { nome: "Culto Dominical", horario: "Domingo às 9h e 18h" },
             { nome: "Escola Dominical", horario: "Domingo às 9h" },
+            { nome: "Culto Dominical", horario: "Domingo às 18h" },
             { nome: "Estudo Bíblico", horario: "Quarta às 19:30h" },
             { nome: "Culto de Oração", horario: "Quinta às 6h" },
             { nome: "Reunião de Jovens", horario: "Segunda às 19h" }
@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // INFORMAÇÕES DE CONTATO PARA O FOOTER
         // =========================================================
         contato: {
-            endereco: "Rua XXXX, nº XXX - Bairro, Macaé - RJ",
-            telefone: "(22) XXXX-XXXX",
-            email: "contato@ipmacae.com.br"
+            endereco: "R. Pref. Eduardo Serrano, 93 - Imbetiba, Macaé - RJ, 27915-170",
+            telefone: "(22)20203678",
+            email: "4igrejapresbiterianademacae@gmail.com"
         },
         
         // =========================================================
