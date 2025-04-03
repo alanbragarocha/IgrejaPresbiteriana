@@ -288,15 +288,15 @@ p {
 }
 
 .pastor-info h3 {
-    color: var(--primary-color);
+    color: var(--dark-bg);
     margin-bottom: 0.5rem;
     font-size: 2rem;
 }
 
 .pastor-cargo {
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5rem;
     font-style: italic;
 }
 

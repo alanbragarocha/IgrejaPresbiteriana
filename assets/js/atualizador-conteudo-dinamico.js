@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 horario: "Domingo às 18h",
                 icone: "fas fa-bible" 
             },
-            { 
-                nome: "Reunião de Oração", 
-                horario: "Quinta às 6h",
-                icone: "fas fa-praying-hands" 
-            },
+           //{ 
+           //    nome: "Reunião de Oração", 
+           //     horario: "Quinta às 6h",
+           //     icone: "fas fa-praying-hands" 
+           // },
            
         ],
         
