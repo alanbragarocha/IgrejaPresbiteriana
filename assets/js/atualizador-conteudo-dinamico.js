@@ -33,6 +33,40 @@ document.addEventListener('DOMContentLoaded', function() {
            
         ],
         
+        
+        // =========================================================
+        // ESCALAS DE SERVIÇO PARA A PÁGINA escalas.html
+        // =========================================================
+        escalas: {
+            louvor: [
+                { data: "07/04/2025 - Domingo Manhã", equipe: "Marcos (Líder), João, Ana, Pedro" },
+                { data: "07/04/2025 - Domingo Noite", equipe: "Rebeca (Líder), Lucas, Mateus, Raquel" },
+                { data: "14/04/2025 - Domingo Manhã", equipe: "Daniel (Líder), Paulo, Marta, Ester" },
+                { data: "14/04/2025 - Domingo Noite", equipe: "Samuel (Líder), Davi, Sara, Isabel" }
+            ],
+            recepcao: [
+                { data: "07/04/2025 - Domingo", equipe: "José e Maria" },
+                { data: "14/04/2025 - Domingo", equipe: "Carlos e Beatriz" },
+                { data: "21/04/2025 - Domingo", equipe: "André e Juliana" },
+                { data: "28/04/2025 - Domingo", equipe: "Roberto e Cristina" }
+            ],
+            escolaDominical: [
+                { data: "07/04/2025 - Classe Infantil", equipe: "Patrícia e Renata" },
+                { data: "07/04/2025 - Classe Adolescentes", equipe: "Fernando" },
+                { data: "14/04/2025 - Classe Infantil", equipe: "Luciana e Carla" },
+                { data: "14/04/2025 - Classe Adolescentes", equipe: "Gabriel" }
+            ],
+            sonoplastia: [
+                { data: "07/04/2025 - Domingo", equipe: "Rodrigo" },
+                { data: "14/04/2025 - Domingo", equipe: "Felipe" },
+                { data: "21/04/2025 - Domingo", equipe: "Leonardo" },
+                { data: "28/04/2025 - Domingo", equipe: "Thiago" }
+            ]
+        },
+
+        // Ano atual para o copyright
+        anoAtual: new Date().getFullYear(),
+        
         // =========================================================
         // CONFIGURAÇÃO DOS HORÁRIOS EXIBIDOS NO FOOTER
         // =========================================================
@@ -63,9 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
             { nome: "WhatsApp", url: "https://wa.me/5522XXXXXXXX", icone: "fab fa-whatsapp" },
             { nome: "Spotify", url: "https://open.spotify.com/show/XXXXXX", icone: "fab fa-spotify" }
         ],
-        
-        // Ano atual para o copyright
-        anoAtual: new Date().getFullYear(),
         
         // =========================================================
         // CONFIGURAÇÃO DO LAYOUT DO FOOTER
@@ -170,6 +201,52 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         },
 
+        
+        // =========================================================
+        // FUNÇÃO PARA PREENCHER AUTOMATICAMENTE A PÁGINA DE ESCALAS
+        // =========================================================
+        atualizarEscalas: function() {
+            const categorias = {
+                louvor: "fa-music",
+                recepcao: "fa-handshake",
+                escolaDominical: "fa-book-open",
+                sonoplastia: "fa-sliders-h"
+            };
+
+            const container = document.querySelector('.escalas-grid');
+            if (!container) return; // sair se não estiver na página de escalas
+
+            container.innerHTML = ''; // limpa escalas existentes (caso esteja reaplicando)
+
+            for (const tipo in dadosIgreja.escalas) {
+                const dados = dadosIgreja.escalas[tipo];
+                const icone = categorias[tipo] || "fa-calendar";
+
+                const card = document.createElement('div');
+                card.className = 'escala-card';
+
+                card.innerHTML = `
+                    <div class="escala-header">
+                        <h3 class="escala-title">
+                            <span class="escala-icon"><i class="fas ${icone}"></i></span>
+                            Escala de ${tipo.charAt(0).toUpperCase() + tipo.slice(1)}
+                        </h3>
+                    </div>
+                    <div class="escala-content">
+                        <ul class="escala-lista">
+                            ${dados.map(item => `
+                                <li class="escala-item">
+                                    <span class="escala-data">${item.data}</span>
+                                    <span class="escala-pessoa">Equipe: ${item.equipe}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+                container.appendChild(card);
+            }
+        },
+
         // Atualizar copyright
         atualizarCopyright: function() {
             const copyrightElement = document.querySelector('.copyright p');
@@ -232,6 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
             PageUpdater.aplicarLayoutFooter();
             
             // Atualizar cada seção individualmente
+            PageUpdater.atualizarEscalas();
             PageUpdater.atualizarInfoIgreja();
             PageUpdater.atualizarHorarios();
             PageUpdater.atualizarContato();
